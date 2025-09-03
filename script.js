@@ -81,7 +81,7 @@ if (contactForm) {
     });
 }
 
-// Add scroll reveal animation
+// Enhanced scroll reveal animation with staggered effects
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -90,18 +90,55 @@ const observerOptions = {
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+            entry.target.classList.add('animate-in');
+            
+            // Stagger animation for child elements
+            const children = entry.target.querySelectorAll('.skill-category, .project-card, .education-card, .timeline-item');
+            children.forEach((child, index) => {
+                setTimeout(() => {
+                    child.classList.add('animate-in');
+                }, index * 100);
+            });
         }
     });
 }, observerOptions);
 
 // Observe all sections for animation
 document.querySelectorAll('section').forEach(section => {
-    section.style.opacity = '0';
-    section.style.transform = 'translateY(30px)';
-    section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    section.classList.add('animate-on-scroll');
     observer.observe(section);
+});
+
+// Enhanced navbar scroll effect with hide/show functionality
+let lastScrollTop = 0;
+let ticking = false;
+
+function updateNavbar() {
+    const navbar = document.querySelector('.navbar');
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (scrollTop > 100) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+    
+    // Hide navbar when scrolling down, show when scrolling up
+    if (scrollTop > lastScrollTop && scrollTop > 200) {
+        navbar.classList.add('hidden');
+    } else {
+        navbar.classList.remove('hidden');
+    }
+    
+    lastScrollTop = scrollTop;
+    ticking = false;
+}
+
+window.addEventListener('scroll', () => {
+    if (!ticking) {
+        requestAnimationFrame(updateNavbar);
+        ticking = true;
+    }
 });
 
 // Typing effect for hero title (optional enhancement)
@@ -129,7 +166,7 @@ window.addEventListener('load', () => {
     }
 });
 
-// Add scroll-to-top functionality
+// Add scroll-to-top functionality with enhanced styling
 const scrollToTopBtn = document.createElement('button');
 scrollToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
 scrollToTopBtn.className = 'scroll-to-top';
@@ -137,9 +174,9 @@ scrollToTopBtn.style.cssText = `
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899);
     color: white;
     border: none;
     border-radius: 50%;
@@ -147,11 +184,72 @@ scrollToTopBtn.style.cssText = `
     display: none;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
-    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
-    transition: all 0.3s ease;
+    font-size: 1.3rem;
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1000;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    animation: scrollButtonPulse 3s ease-in-out infinite;
 `;
+
+// Add loading animation with particle effects
+window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
+    
+    // Create floating particles
+    createParticles();
+    
+    // Animate hero elements with delay
+    setTimeout(() => {
+        document.querySelector('.hero-content').style.animation = 'slideInLeft 1s cubic-bezier(0.4, 0, 0.2, 1)';
+    }, 200);
+    
+    setTimeout(() => {
+        document.querySelector('.hero-image').style.animation = 'slideInRight 1s cubic-bezier(0.4, 0, 0.2, 1)';
+    }, 400);
+});
+
+// Create floating particles effect
+function createParticles() {
+    const particleContainer = document.createElement('div');
+    particleContainer.className = 'particles';
+    particleContainer.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 1;
+        overflow: hidden;
+    `;
+    
+    document.body.appendChild(particleContainer);
+    
+    // Create particles
+    for (let i = 0; i < 50; i++) {
+        createParticle(particleContainer);
+    }
+}
+
+function createParticle(container) {
+    const particle = document.createElement('div');
+    particle.style.cssText = `
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background: linear-gradient(135deg, #6366f1, #8b5cf6);
+        border-radius: 50%;
+        opacity: 0.6;
+        animation: float ${5 + Math.random() * 10}s linear infinite;
+        left: ${Math.random() * 100}%;
+        top: ${Math.random() * 100}%;
+        animation-delay: ${Math.random() * 5}s;
+    `;
+    
+    container.appendChild(particle);
+}
 
 document.body.appendChild(scrollToTopBtn);
 
@@ -172,13 +270,15 @@ scrollToTopBtn.addEventListener('click', () => {
     });
 });
 
-// Hover effect for scroll-to-top button
+// Enhanced hover effect for scroll-to-top button
 scrollToTopBtn.addEventListener('mouseenter', () => {
-    scrollToTopBtn.style.transform = 'scale(1.1)';
-    scrollToTopBtn.style.boxShadow = '0 6px 20px rgba(99, 102, 241, 0.6)';
+    scrollToTopBtn.style.transform = 'scale(1.15) rotate(5deg)';
+    scrollToTopBtn.style.boxShadow = '0 15px 40px rgba(99, 102, 241, 0.8)';
+    scrollToTopBtn.style.background = 'linear-gradient(135deg, #8b5cf6, #ec4899, #f59e0b)';
 });
 
 scrollToTopBtn.addEventListener('mouseleave', () => {
-    scrollToTopBtn.style.transform = 'scale(1)';
-    scrollToTopBtn.style.boxShadow = '0 4px 15px rgba(99, 102, 241, 0.4)';
+    scrollToTopBtn.style.transform = 'scale(1) rotate(0deg)';
+    scrollToTopBtn.style.boxShadow = '0 8px 25px rgba(99, 102, 241, 0.4)';
+    scrollToTopBtn.style.background = 'linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899)';
 });

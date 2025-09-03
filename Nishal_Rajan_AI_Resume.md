@@ -1,55 +1,70 @@
 # NISHAL RAJAN
 
-Full Stack Developer 
+Generative AI Engineer | Agentic AI Developer | LLM Engineer
 
-No:33 Lakshmi Amman Kovil 2nd Street, TV Padi, Ponneri \- 601204 | \+91 9381111923 | rajanishal1999@gmail.com
-
-LinkedIn: linkedin.com/in/nishalrajan
+📍 Ponneri, Tamil Nadu | 📞 \+91 9381111923 | 📧 rajanishal1999@gmail.com  
+🔗 Portfolio: https://nishalrajan1999123.github.io/protfolio  
+🔗 GitHub: https://github.com/nishalrajan1999123  
+🔗 LinkedIn: https://linkedin.com/in/nishalrajan
 
 # **Professional Summary**
 
-Results-driven Full Stack Developer (3+ years) with proven expertise in delivering robust applications using Java, Spring Boot, AngularJS, and Oracle SQL. Strong focus on integrating AI-powered development tools (e.g., GitHub Copilot, ChatGPT) to automate code, enhance productivity, and accelerate problem-solving. Adept at full SDLC, DevOps, and cross-functional teamwork in Agile environments.
+Generative AI Engineer with hands-on expertise in LLM engineering, agentic frameworks (CrewAI, LangGraph, AutoGen, MCP), and RAG pipelines (Chroma, FAISS). Skilled in building multi-agent systems, AI-powered chatbots, coding agents, and LLMOps workflows. Certified in Generative AI, Agentic AI, and LLM Engineering, with 3.5 years of enterprise experience as a Full-Stack Developer (Java, Spring Boot, Angular, Oracle SQL). Passionate about bridging enterprise-grade software engineering with cutting-edge AI-first applications.
 
 # **Core Competencies**
 
-• AI Tools for Developers: GitHub Copilot, ChatGPT, OpenAI API, Codeium  
-• Languages: Java, SQL, JavaScript (AngularJS/Angular), HTML, CSS  
-• Frameworks: Spring Boot, Hibernate, REST APIs  
-• DevOps: GIT, SVN, Jira, Jenkins, Docker  
-• Database: Oracle SQL/PLSQL  
-• Cloud & Deployment: Tomcat, WebLogic, AWS Basics  
-• Soft Skills: Agile, Teamwork, Communication, Problem-Solving
+• Generative AI & Agentic AI: OpenAI Agent SDK, CrewAI, LangGraph, LangChain, AutoGen, MCP, LlamaIndex
+
+• LLM Engineering: Prompt Engineering, Function Calling, Multi-Agent Systems, RAG, Fine-Tuning (LoRA/PEFT), Guardrails
+
+• Vector Databases: Chroma, FAISS
+
+• AI Tools & Frameworks: PythonREPLTool, Serper API, Playwright, BeautifulSoup, LangSmith, Gradio, Hugging Face Hub & Inference API, OpenAI Assistants API
+
+• Software Engineering: Java, Spring Boot, Hibernate, REST APIs, AngularJS/Angular, Oracle SQL/PLSQL
+
+• DevOps & Cloud: Git, Jenkins, Docker, Tomcat, AWS Basics
+
+# **Generative AI Projects**
+
+• Functional Chatbot Assistant (RAG) – Built an AI-powered assistant that retrieves knowledge from vector DBs (Chroma/FAISS) and answers queries contextually.
+
+• Database Bot (LangGraph) – Developed an LLM agent that translates natural language queries into SQL using LangGraph and executes against real DBs.
+
+• Personal Chatbot (LangGraph) – Multi-agent personalized assistant with memory, embeddings, and tool integrations.
+
+• Interview Question Predictor – Multi-agent workflow (LangGraph \+ Playwright \+ BeautifulSoup) to scrape job descriptions and predict interview questions.
+
+• Coding Agent with IDE Integration – Built an AI coding assistant with tool-use capabilities (PythonREPL, file handling, IDE integration).
 
 # **Professional Experience**
 
-**Full Stack Developer**
+## **Full-Stack Developer**
 
-Inspirisys Solution Limited | Oct 2021 – Present
+Inspirisys Solutions Limited | Oct 2021 – Present
 
-• Developed and maintained modern web applications with AI-augmented coding workflows using tools like GitHub Copilot and ChatGPT, reducing development time and improving code quality.  
-• Built RESTful APIs and robust backend logic using Java/Spring Boot; designed dynamic UIs with AngularJS.  
-• Leveraged Oracle SQL/PLSQL for efficient database operations and optimization.  
-• Automated routine coding tasks and conducted code reviews with AI-powered assistance, enhancing team productivity.  
-• Deployed and managed applications on Tomcat and WebLogic servers.  
-• Utilized DevOps tools (GIT, SVN, Jira, Jenkins) for streamlined project management, CI/CD, and version control.  
-• Collaborated in Agile teams, driving innovation and continuous improvement.
+• Developed and maintained enterprise banking applications using Java, Spring Boot, AngularJS, Oracle SQL/PLSQL.
+
+• Designed and optimized RESTful APIs and large-scale data operations.
+
+• Introduced AI-augmented workflows (GitHub Copilot, ChatGPT) to accelerate development and improve code quality.
+
+• Deployed and managed apps on Tomcat/WebLogic, streamlined CI/CD with Jenkins.
+
+• Collaborated in Agile teams, aligning product delivery with business needs.
 
 # **Education**
 
-B.E., Electronics & Communication Engineering | TJS Engineering College | CGPA: 7.5  
-Diploma, Electronics & Communication Engineering | Murugappa Polytechnic College | 75%  
-SSLC | Velammal Matric Hr. Sec. School | 85%
+• B.E., Electronics & Communication Engineering – TJS Engineering College | CGPA: 7.5
 
-# **Certifications & Training**
+• Diploma, Electronics & Communication Engineering – Murugappa Polytechnic College | 75%
 
-(Add any relevant AI/ML, Cloud, or DevOps certifications if available\!)
+• SSLC – Velammal Matric Hr. Sec. School | 85%
 
-# **Personal Details**
+# **Certifications**
 
-Date of Birth: 13/01/1999
+• Generative AI Engineer – Udemy
 
-Languages: English, Tamil
+• Agentic AI Developer – Udemy
 
-# **Declaration**
-
-I hereby declare that the information provided is true to the best of my knowledge.
+• LLM Engineer – Udemy
